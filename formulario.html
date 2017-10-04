@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<script src="https://use.fontawesome.com/3ad2555004.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.serializejson.js"></script>
+        <link rel="shortcut icon" href="favicon.ico">
+	<meta charset="utf-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Create an Account</h1>
+    <form id="myform" action="" method="post">
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></span>
+  <input class="form-control" type="text" name="nombre" placeholder="Name" required="true">
+</div>
+<p></p>
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+  <input class="form-control" type="tel" pattern="[0-9]{9}" name="telefono" placeholder="+52-33-31-68-33-96" required="true">
+</div>
+<p></p>
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+  <input class="form-control" type="email" name="email" placeholder="Email address" required="true">
+</div>
+<p></p>
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+  <input class="form-control" type="password" name="pass" placeholder="Password" required="true">
+</div>
+<div>
+      <p><input id="cheq" type="checkbox" name="terms" value="Car">I agree to the <a href="terminos.html">Terms and Conditions</a> and <a href="privacidad.html">Privacy Policy</a></p>
+      <p><button onclick="serializar()">Create Account</button></p>
+  </form>
+  <script>
+                function serializar()
+                {
+                    
+                        var text = "";
+                        console.log($('cheq'))
+                        if ($('#cheq').is(':checked')) 
+                        {
+                        text = $('#myform').serializeJSON();
+                        if (text.nombre == "" || text.telefono == "" || text.email == "" || text.pass == "") {
+                        	alert ("Por favor llene los campos")
+                        }
+
+                        else{
+                        console.log(text);
+                        alert(text.nombre+"\n"+ text.telefono+"\n"+text.email+"\n"+ text.pass);
+                        }
+                        }
+                        else{
+                        	alert("por favor acepte los terminos");
+                        }                    
+                }
+            </script>
+</div>⁠⁠⁠⁠
+</body>
+</html>
