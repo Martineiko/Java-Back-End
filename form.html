@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Formulario para la beta del YAPMAT</h1>
+	<p>(Yet Another Project Managment Tool)</p>
+<p>tel:<input type="tel" placeholder="xxx-xxxx-xxxx"></p>
+<p>search:<input type="search" placeholder="info"></p>
+<p>url:<input type="url" placeholder="www.someting.yuj" contenteditable="true" required="true"></p>
+<p>email:<input type="email" placeholder="example@123.com" autocomplete="on"></p>
+<p>datetime:<input type="datetime" placeholder="01-01-1990"></p>
+<p>date<input type="date"></p>
+<p>month:<input type="month"></p>
+<p>week:<input type="week"></p>
+<p>time:<input type="time"></p>
+<p>datetime-local:<input type="datetime-local" placeholder="01-01-0000"></p>
+<p>number<input type="number" placeholder="12345"></p>
+<p>range<input type="range"></p>
+<p>color<input type="color" autofocus="1"></p>
+<p contenteditable="true">Hola checate que se modifica</p>
+<p contenteditable="false">Este no</p>
+<code>H1 es una etiqueta</code>
+
+<form>
+	<input list="browsers" name="browsers">
+	<datalist id="browsers">
+		<option value="Safari"></option>
+		<option value="IE"></option>
+	</datalist>
+</form>
+<form>
+	<input list="email" name="email">
+	<datalist id="emai">
+		<option value="123@example.com" label="Gerente"></option>
+		<option value="456@example.com" label="Director"></option>
+	</datalist>
+</form>
+<label>Years hired: </label>
+<input type="range" max="10" min="0" value="5" name="hired">
+</body>
+</html>
