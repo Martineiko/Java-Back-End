@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*CSS Document*/
+body{
+	background-color: #7E8D85;
+}
+h1{
+	color: #A0C3F8;
+	text-transform: capitalize; 
+}
+h2{
+	color: #A0C3F8;
+	text-transform: capitalize;
+}
+a.purple{
+	color: #BB17AF;
+}
+a.red{
+	color: #DD1C1A;
+}
+p.movie{
+	margin-left: 1em;
+}
