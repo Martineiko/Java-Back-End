@@ -253,7 +253,11 @@ function arreglo()
 	{
 		nombre : "Juan",
 		edad : 25,
-		colorDeOjos : "verde"
+		colorDeOjos : "verde",
+		miFuncion: function /*opcional-->*/unaFuncion() 
+		{
+			console.log("funcion interna");
+		}
 	}
 
 	var gente = [{
@@ -309,7 +313,7 @@ function arreglo()
 
 
 	function manejarObjetos() 
-	{
+	{	
 		console.log("Pruebas con el maestro");
 		var dinamico = "colorDeOjos";
 		console.log(Object.keys(persona));
@@ -329,6 +333,8 @@ function arreglo()
 		console.log(generation);
 		console.log(generation.curso+" con: "+generation["alumnos"]);
 		console.log(generation,vehiculo);
+		console.log("Funcion dentro de un objeto");
+		persona.miFuncion();
 		//concatenacion de dos arreglos
 		var alpha = ['a', 'b', 'c'],
     		numeric = [1, 2, 3];
