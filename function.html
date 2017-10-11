@@ -15,17 +15,83 @@ escribes aqui no se mostrara en pantalla, asi que estas seguro XD-->
   	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
   	<meta http-equiv="Pragma" content="no-cache"> -->
 	<!--Este titulo se ve en el encabezado del navegador-->
+	<style type="text/css">
+		.alert{
+			padding: 20px;
+			background-color: #F44336;
+			color: white;
+			opacity: 1;
+			transition: opacity 0.6s;
+			margin-bottom: 15px;
+		}
+		.alert.success{
+			background-color: #4CAF50;
+		}
+		.alert.info{
+			background-color: #2196F3;
+		}
+		.alert.warning{
+			background-color: #FF9800;
+		}
+	</style>
 	<title>Funcion.js</title>
 </head>
 <body>
 <h1>Pestaña console para ver la magia</h1>
 <!--Este boton llama la funcion del archivo js-->
-<button id="button" onclick="miFuncion()">Pushale</button>
-<button onclick="bucles()">Bucle carnal</button>
-<button onclick="buclesWhile()">Liberen a While</button>
-<button onclick="buclesDoWhile()">Do do do While</button>
-<button onclick="opeArit()">Llegale a la Aritmetica</button>
+<button class="btn btn-primary-key" onclick="miFuncion()">Pushale</button>
+<button class="btn btn-primary-key" onclick="bucles()">Bucle carnal</button>
+<button class="btn btn-primary-key" onclick="buclesWhile()">Liberen a While</button>
+<button class="btn btn-primary-key" onclick="buclesDoWhile()">Do do do While</button>
+<button class="btn btn-primary-key" onclick="opeArit()">Llegale a la Aritmetica</button>
+<button class="btn btn-primary-key" onclick="logicos()">Logica chavo</button>
+<button class="btn btn-primary-key" onclick="arreglo()">Arreglo</button>
+<button class="btn btn-primary-key" onclick="limpieza()">Limpiar console</button>
+<button class="btn btn-primary-key" onclick="misAlerts()">Alerta!!</button>
+<button class="btn btn-primary-key" onclick="manejarObjetos()">Objetos</button>
+
+
+
+<div class="alert success">
+	<strong>Success!</strong> Indicates a succesful or positive activities
+	<span class="closebtn">
+		&times;
+	</span>
+</div>
+<div class="alert info">
+	<strong>Info!</strong> Indicates a Information really important or not! XD
+	<span class="closebtn">
+		&times;
+	</span>
+</div>
+<div class="alert warning">
+	<strong>Warning!</strong> Indicates a warning because you doing some wrong!
+	<span class="closebtn">
+		&times;
+	</span>
+</div>
 </body>
 <!--Haciendo referencia al archivo js-->
 <script type="text/javascript" src="js/function.js"></script>
+<!--Script para el control del alert-->
+<script type="text/javascript">
+	//Busca el elemento que se le da click
+	var close = document.getElementsByClassName("closebtn");
+	//contador
+	var i;
+	//ciclo para trabajar sobre el elemento al que se le dio click
+	for (var i = 0; i < close.length; i++) 
+	{
+		//Al elemento se le da un evento
+		close[i].onclick=function()
+		{
+		//obtener el elemento padre
+		var div = this.parentElement;
+		//efecto de desaparecer o cambiar opacidad
+		div.style.opacity = "0";
+		//controlar la opacidad con tiempo
+		setTimeout(function(){ div.style.display = "none"; }, 600);
+		}
+	}
+</script>
 </html>
