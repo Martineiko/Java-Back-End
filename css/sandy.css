@@ -1,0 +1,42 @@
+#pub{
+	margin-top: .5em;
+	margin-bottom: .5em;
+	border-left-style: solid;
+	border-top-style: solid;
+  	border-right-style: solid;
+  	border-bottom-style: solid;
+}
+#com{
+	margin-top: 2em;
+	margin-bottom: .5em;
+	border-left-style: solid;
+	border-top-style: solid;
+  	border-right-style: solid;
+  	border-bottom-style: solid;
+}
+#pic{
+	margin-top: .25em;
+	color: #000000;
+}
+#tex{
+	margin-bottom: 1em;
+	margin-right: 1em;
+	margin-left: 1em;
+	border-left-style: solid;
+	border-top-style: solid;
+  	border-right-style: solid;
+  	border-bottom-style: solid;
+}
+#plus{
+	margin-top: 1em;
+}
+#modaName{
+	margin-top: 1em;
+}
+#modaPic{
+	margin-left: 1em;
+	margin-top: .5em;
+}
+#imgpub{
+	color: #000000;
+}
