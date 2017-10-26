@@ -14,6 +14,7 @@ h2{
 a.purple{
 	color: #BB17AF;
 	text-decoration: none;
+	/*text-transform: uppercase;*/
 }
 a.red{
 	color: #DD1C1A;
